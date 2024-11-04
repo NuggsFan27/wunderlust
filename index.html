@@ -187,15 +187,26 @@
 
                 <h3>Contact Us</h3>
                 <form id="contact-us"> 
-                    <label for="fname">First Name<span class="required">*</span></label><input id="fname" type="text">
+                    <label for="firstName">First Name<span class="required">*</span></label>
+		    <input type="text" name="firstName" id="firstName" autocomplete="given-name">
 
-                    <label for="lname">Last Name<span class="required">*</span></label><input id="lname" type="text">
+                    <label for="lastName">Last Name<span class="required">*</span></label>
+		    <input type="text" name="lastName" id="lastName" autocomplete="family-name">
+			
                   <fieldset>
                     <legend>Contact Method</legend>
-                    <label for="email">Email<span class="required">*</span></label><input id="email" type="email">
-
-                    <label for="phone">Phone<span class="required">*</span></label><input id="phone" type="number">
+                    <input type="radio" name="contactPreference" id="prefEmail" required>
+                    <label for="prefEmail">Email</label>
+                    <input type="radio" name="contactPreference" id="prefText">
+                    <label for="prefText">Text</label>
+                    <input type="radio" name="contactPreference" id="prefPhone">
+                    <label for="prefPhone">Phone</label>
                   </fieldset>
+
+		  <label for="email">Email Address</label>
+                  <input type="email" name="email" id="email" autocomplete="email">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" name="phone" id="phone" autocomplete="tel">
 
                   <label for="destination">Destination</label>
                   <select name="destination" id="destination">
